@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+@model ChoixResto.ViewModels.AccueilViewModel
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+
+    <body>
+        <div>Je suis un index</div>
+        <table>
+            <tr>
+                <th>Nom</th>
+                <th>Téléphone</th>
+            </tr>
+            @{
+                foreach (var resto in Model.ListeDesRestos)
+                {
+                    <tr>
+                        <td>@resto.Nom</td>
+                        <td>@resto.Telephone</td>
+                    </tr>
+                }
+            }
+        </table>
+    </body>
+</html>
